@@ -1,0 +1,120 @@
+.main {
+  padding: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  & > div {
+    margin: 20px;
+  }
+
+  .single {
+    width: 200px;
+    height: 200px;
+    background: url("~@/assets/1.png"), #00ffff;
+    background-size: 100% 100%;
+    background-blend-mode: lighten;
+  }
+
+  .singleAfter {
+    width: 200px;
+    height: 200px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin-left: 10px;
+      width: 200px;
+      height: 200px;
+      background: url("~@/assets/1.png"), #f00;
+      background-size: 100% 100%;
+      background-blend-mode: lighten;
+      mix-blend-mode: darken;
+    }
+  }
+
+  .mix {
+    width: 200px;
+    height: 200px;
+    background: url("~@/assets/1.png"), #00ffff;
+    background-size: 100% 100%;
+    background-blend-mode: lighten;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin-left: 10px;
+      width: 200px;
+      height: 200px;
+      background: url("~@/assets/1.png"), #f00;
+      background-size: 100% 100%;
+      background-blend-mode: lighten;
+      mix-blend-mode: darken;
+    }
+  }
+
+  .mixGif {
+    width: 200px;
+    height: 200px;
+    background: url("~@/assets/3.gif"), #00ffff;
+    background-size: 100% 100%;
+    background-blend-mode: lighten;
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin-left: 10px;
+      width: 200px;
+      height: 200px;
+      background: url("~@/assets/3.gif"), #f00;
+      background-size: 100% 100%;
+      background-blend-mode: lighten;
+      mix-blend-mode: darken;
+    }
+  }
+
+  .mixDiffBasic {
+    position: relative;
+    width: 322px;
+    height: 357px;
+    background: url("~@/assets/2.png");
+    background-size: cover;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 215px;
+      left: 90px;
+      width: 120px;
+      height: 96px;
+      background: url("~@/assets/3.gif");
+      background-size: cover;
+    }
+  }
+
+  .mixDiffWhite {
+    .mixDiffBasic;
+
+    &::before {
+      mix-blend-mode: color-dodge;
+      filter: invert(1) contrast(3);
+    }
+  }
+
+  .mixDiff {
+    .mixDiffBasic;
+
+    &::before {
+      background: var("~@/assets/3.gif"), #000;
+      mix-blend-mode: multiply;
+      filter: contrast(3);
+    }
+  }
+}

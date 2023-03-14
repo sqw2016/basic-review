@@ -1,12 +1,16 @@
 import React from "react";
-import { Route, createRoutesFromElements, createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import CSSLayout from "@/layouts/CSSLayout";
 
-const CSS = React.lazy(() => import("@/layouts/CSSLayout"))
-
-const router = createBrowserRouter(createRoutesFromElements(<Route path="/" element={<CSS />} />))
+const Home = React.lazy(() => import("@/pages/home"))
 
 const renderRouter = () => {
-    return <RouterProvider router={router} />
+    return <HashRouter>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="css/*" element={<CSSLayout />} />
+        </Routes>
+    </HashRouter>
 }
 
 export default renderRouter;

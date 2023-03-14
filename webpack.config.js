@@ -5,8 +5,8 @@ module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
   output: {
-    filename: "[name].js",
-    chunkFilename: "[chunkHash:8].js",
+    filename: "[name][chunkhash:8].js",
+    chunkFilename: '[id].[chunkhash].js',
     path: path.resolve(__dirname, "dist"),
     publicPath: "/"
   },
@@ -49,7 +49,14 @@ module.exports = {
             test: /\.(less|css)$/i,
             use: [
               "style-loader",
-              "css-loader",
+              {
+                loader: "css-loader",
+                options: {
+                  modules: {
+                    localIdentName: "[path][name]_[local]_[hash:base64:5]",
+                  }
+                }
+              },
               {
                 loader: "postcss-loader",
                 options: {

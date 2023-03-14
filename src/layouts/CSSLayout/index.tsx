@@ -1,36 +1,53 @@
 import React from "react";
-import {createBrowserRouter, useLocation } from "react-router-dom";
+import {Routes, Route, Link, useLocation} from "react-router-dom";
+import MixBlendMode from "@/pages/css/MixBlendMode";
+import BackgroundBlendMode from "@/pages/css/BackgroundBlendMode";
+import BlendMode from "@/pages/css/BlendMode";
+import BackgroundClip from "@/pages/css/BackgroundClip";
 
-const MixBlendModel = React.lazy(() => import("@/pages/css/MixBlendModel"))
+import styles from "./index.module.less";
 
 const CSSLayout = () => {
   window.name = "css";
 
+  const { pathname } = useLocation();
+
   const router = [
     {
-      path: 'mix-blend-model',
-      element: <MixBlendModel />
+      path: 'mix-blend-mode',
+      element: <MixBlendMode />
+    },
+    {
+      path: 'background-blend-mode',
+      element: <BackgroundBlendMode />
+    },
+    {
+      path: 'blend-mode',
+      element: <BlendMode />
+    },
+    {
+      path: 'background-clip',
+      element: <BackgroundClip />
     }
   ]
 
-
-  const { pathname } = useLocation();
-
+  const paths = pathname.split("/")
+  const activeMenuKey = paths[paths.length - 1]
+  
   return <section>
-    <header>css</header>
-    <main>
-      <nav>
+    <header className={styles.header}>css</header>
+    <main className={styles.main}>
+      <nav className={styles.nav}>
         <ul>
-          {
-            router.map(item => (<li key={item.path}>{item.path}</li>))
-          }
+          {router.map(item => (<li key={item.path} className={activeMenuKey === item.path ? styles.active : ""}>
+              <Link to={item.path}>{item.path}</Link>
+            </li>))}
         </ul>
       </nav>
-      <div>
-        {createBrowserRouter(router.map(item => ({
-          path: `${pathname}/${item.path}`,
-          ...item,
-        })))}
+      <div className={styles.content}>
+        <Routes>
+          {router.map(item => (<Route path={item.path} element={item.element} />))}
+        </Routes>
       </div>
     </main>
   </section>;
