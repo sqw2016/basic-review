@@ -133,4 +133,22 @@
     overflow: hidden;
     font-size: 10px;
   }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    & > div {
+      width: 150px;
+      height: 250px;
+      background: url("~@/assets/3.gif") center/cover;
+      margin: 0 10px;
+      font-size: 8px;
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+  }
 }
