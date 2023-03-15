@@ -2,7 +2,7 @@ import React from "react";
 import {Routes, Route, Link, useLocation} from "react-router-dom";
 import MixBlendMode from "@/pages/css/MixBlendMode";
 import BackgroundBlendMode from "@/pages/css/BackgroundBlendMode";
-import BlendMode from "@/pages/css/BlendMode";
+import MixMode from "@/pages/css/MixMode";
 import BackgroundClip from "@/pages/css/BackgroundClip";
 import Filter from "@/pages/css/Filter";
 
@@ -32,7 +32,7 @@ const CSSLayout = () => {
     },
     {
       path: 'mix-mode',
-      element: <BlendMode />
+      element: <MixMode />
     }
   ]
 

@@ -26,6 +26,7 @@
   .singleAfter {
     width: 200px;
     height: 200px;
+    position: relative;
 
     &::after {
       content: '';
@@ -46,6 +47,7 @@
     background: url("~@/assets/1.png"), #00ffff;
     background-size: 100% 100%;
     background-blend-mode: lighten;
+    position: relative;
 
     &::after {
       content: '';
@@ -66,6 +68,7 @@
     background: url("~@/assets/3.gif"), #00ffff;
     background-size: 100% 100%;
     background-blend-mode: lighten;
+    position: relative;
 
     &::after {
       content: '';
@@ -112,9 +115,22 @@
     .mixDiffBasic;
 
     &::before {
-      background: var("~@/assets/3.gif"), #000;
+      background: url("~@/assets/3.gif"), #000;
       mix-blend-mode: multiply;
       filter: contrast(3);
     }
+  }
+
+  .unbelievableText {
+    background: url("~@/assets/3.gif") center/cover;
+    background-size: cover;
+    filter: grayscale(1) invert(1);
+    mix-blend-mode: hard-light;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    width: 300px;
+    overflow: hidden;
+    font-size: 10px;
   }
 }
