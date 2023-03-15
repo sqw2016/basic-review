@@ -4,6 +4,7 @@ import MixBlendMode from "@/pages/css/MixBlendMode";
 import BackgroundBlendMode from "@/pages/css/BackgroundBlendMode";
 import BlendMode from "@/pages/css/BlendMode";
 import BackgroundClip from "@/pages/css/BackgroundClip";
+import Filter from "@/pages/css/Filter";
 
 import styles from "./index.module.less";
 
@@ -22,12 +23,16 @@ const CSSLayout = () => {
       element: <BackgroundBlendMode />
     },
     {
-      path: 'blend-mode',
-      element: <BlendMode />
-    },
-    {
       path: 'background-clip',
       element: <BackgroundClip />
+    },
+    {
+      path: 'filter',
+      element: <Filter />
+    },
+    {
+      path: 'mix-mode',
+      element: <BlendMode />
     }
   ]
 
