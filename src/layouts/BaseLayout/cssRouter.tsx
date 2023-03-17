@@ -3,6 +3,7 @@ import BackgroundBlendMode from "@/pages/css/BackgroundBlendMode";
 import BackgroundClip from "@/pages/css/BackgroundClip";
 import Filter from "@/pages/css/Filter";
 import MixMode from "@/pages/css/MixMode";
+import Transform from "@/pages/css/Transform";
 
 const router = [
   {
@@ -20,6 +21,10 @@ const router = [
   {
     path: 'filter',
     element: <Filter />
+  },
+  {
+    path: 'transform',
+    element: <Transform />
   },
   {
     path: 'mix-mode',
