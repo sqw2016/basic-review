@@ -9,7 +9,7 @@ const Transform = () => {
 
   useEffect(() => {
     if (val) setTimeout(() => {
-      setValue()
+      setValue("")
     }, 2000)
   }, [val])
 
