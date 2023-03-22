@@ -17,7 +17,7 @@ const SubLayout = ({routers}) => {
     }
   }, [routers])
   
-  return <section>
+  return <section style={{overflow: "hidden"}}>
     <Header />
     <main className={styles.main}>
       <nav className={styles.nav}>
