@@ -2,6 +2,7 @@ const PENDING = "pending"
 const FULFILLED = "fulfilled"
 const REJECTED = "rejected"
 
+// 消除异步传染性
 const PromiseView = () => {
 
   function getUser() {
