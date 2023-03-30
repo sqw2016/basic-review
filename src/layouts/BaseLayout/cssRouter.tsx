@@ -4,6 +4,7 @@ import BackgroundClip from "@/pages/css/BackgroundClip";
 import Filter from "@/pages/css/Filter";
 import MixMode from "@/pages/css/MixMode";
 import Transform from "@/pages/css/Transform";
+import RollerHorizontalScroll from "@/pages/css/RollerHorizontalScroll";
 
 const router = [
   {
@@ -29,6 +30,10 @@ const router = [
   {
     path: 'mix-mode',
     element: <MixMode />
+  },
+  {
+    path: 'roller-horizontal-scroll',
+    element: <RollerHorizontalScroll />
   }
 ]
 

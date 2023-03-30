@@ -38,7 +38,7 @@ const NumberToChinese = props => {
   }
 
   return <div>
-    <h1>数字转中文</h1>
+    <h1>万亿以内数字转中文</h1>
     <h2>101020120: ${numberToChinese(101020120)}</h2>
     <h2>1234678890: ${numberToChinese(1234678890)}</h2>
     <h2>100000000011: ${numberToChinese(100000000011)}</h2>
