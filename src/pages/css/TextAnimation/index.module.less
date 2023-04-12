@@ -1,0 +1,23 @@
+.container {
+  background-color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  filter: contrast(30);
+}
+
+@keyframes nameGap {
+  from  {
+    letter-spacing: -14px;
+    filter: blur(8px);
+  }
+  to  {
+    letter-spacing: 10px;
+    filter: blur(0);
+  }
+}
+
+.text {
+  color: white;
+  animation: nameGap 3s forwards;
+}
