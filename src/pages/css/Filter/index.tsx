@@ -3,7 +3,7 @@ import gif from '@/assets/3.gif'
 
 const Filter = () => {
   const properties = [{
-    value: "url(\"https://interactive-examples.mdn.mozilla.net/media/examples/shadow.svg#element-id\")",
+    value: gif,
     desc: "获取指向 SVG 滤镜的 URI",
   }, {
     value: "blur(5px)",

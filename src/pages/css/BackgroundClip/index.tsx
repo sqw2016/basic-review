@@ -20,7 +20,7 @@ const BackgroundClip = () => {
     <div className={styles.list}>
       {
         properties.map(item => (
-          <p key={item.value} style={{backgroundClip: item.value, webkitBackgroundClip: item.value}}>{item.desc}</p>
+          <p key={item.value} style={{backgroundClip: item.value, WebkitBackgroundClip: item.value}}>{item.desc}</p>
         ))
       }
     </div>

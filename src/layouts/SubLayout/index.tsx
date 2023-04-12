@@ -29,7 +29,7 @@ const SubLayout = ({routers}) => {
       </nav>
       <div className={styles.content}>
         <Routes>
-          {routers.map(item => (<Route path={item.path} element={item.element} />))}
+          {routers.map(item => (<Route key={item.path} path={item.path} element={item.element} />))}
         </Routes>
       </div>
     </main>
