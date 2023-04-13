@@ -6,6 +6,7 @@ import MixMode from "@/pages/css/MixMode";
 import Transform from "@/pages/css/Transform";
 import RollerHorizontalScroll from "@/pages/css/RollerHorizontalScroll";
 import TextAnimation from "@/pages/css/TextAnimation";
+import PositionSticky from "@/pages/css/PositionSticky";
 
 const router = [
   {
@@ -39,6 +40,10 @@ const router = [
   {
     path: 'text-animation',
     element: <TextAnimation />
+  },
+  {
+    path: 'position-sticky',
+    element: <PositionSticky />
   }
 ]
 
