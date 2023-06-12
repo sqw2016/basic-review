@@ -36,3 +36,20 @@ dd {
 dd + dd {
   border-top: 1px solid #CCC
 }
+
+.HorizontalContainer {
+  width: 500px;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  dt, dd {
+    width: 200px;
+    display: inline-block;
+  }
+
+  dt {
+    position: -webkit-sticky;
+    position: sticky;
+    left: -1px;
+  }
+}

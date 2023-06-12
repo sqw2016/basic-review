@@ -1,5 +1,6 @@
 import PromiseView from "@/pages/js/PromiseView";
 import NumberToChinese from "@/pages/js/NumberToChinese";
+import Language from "@/pages/js/Language";
 
 const router = [
   {
@@ -9,6 +10,10 @@ const router = [
   {
     path: 'numberToChinese',
     element: <NumberToChinese />
+  },
+  {
+    path: 'language',
+    element: <Language />
   },
 ]
 

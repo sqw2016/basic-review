@@ -20,7 +20,7 @@ module.exports = {
     extensions: ['.js', '.ts', '.jsx', '.tsx'],
     alias: {
       "@": path.resolve(__dirname, "src"),
-      "ass": path.resolve(__dirname, "assets")
+      "public": path.resolve(__dirname, "public")
     }
   },
   module: {

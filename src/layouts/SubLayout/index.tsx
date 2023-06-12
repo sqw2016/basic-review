@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Routes, Route, Link, useLocation, useNavigate} from "react-router-dom";
+import { Routes, Route, Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "./Header";
 
 import styles from "./index.module.less";

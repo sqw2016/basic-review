@@ -1,4 +1,12 @@
-const NumberToChinese = props => {
+import {useTranslation} from "react-i18next";
+
+const NumberToChinese = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+  }
+
   // 将 number 从后向前拆分成 4 位一组
   const splitNumber = (num) => {
     let strNum = num.toString()
@@ -39,6 +47,9 @@ const NumberToChinese = props => {
 
   return <div>
     <h1>万亿以内数字转中文</h1>
+    <button onClick={() => changeLanguage("zh")}>简体中文</button>
+    <button onClick={() => changeLanguage("en")}>English</button>
+    <div>{t("welcome")}</div>
     <h2>101020120: ${numberToChinese(101020120)}</h2>
     <h2>1234678890: ${numberToChinese(1234678890)}</h2>
     <h2>100000000011: ${numberToChinese(100000000011)}</h2>
