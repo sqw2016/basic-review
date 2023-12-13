@@ -1,6 +1,7 @@
 import PromiseView from "@/pages/js/PromiseView";
 import NumberToChinese from "@/pages/js/NumberToChinese";
 import Language from "@/pages/js/Language";
+import AbortControllerView from "@/pages/js/AbortController";
 
 const router = [
   {
@@ -14,6 +15,10 @@ const router = [
   {
     path: 'language',
     element: <Language />
+  },
+  {
+    path: 'abort',
+    element: <AbortControllerView />
   },
 ]
 

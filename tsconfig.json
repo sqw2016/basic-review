@@ -9,7 +9,13 @@
     "paths": {
       "@/*": ["./src/*"],
       "ass/*": ["./assets/*"]
-    }
+    },
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.promise"
+    ]
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js", "./src/**/*.jsx"]
 }

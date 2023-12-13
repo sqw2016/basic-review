@@ -34,7 +34,7 @@ const PromiseView = () => {
   }
 
   function run(fn) {
-    const originFetch = window.fetch
+    window.originFetch = window.originFetch || window.fetch
     const cache = [];
     let i = 0;
     window.fetch = (...args) => {
@@ -54,7 +54,7 @@ const PromiseView = () => {
         cache[i] = result
         i++
         // 直接抛出 Promise, 并在其执行完毕之后记录其状态
-        throw originFetch(...args)
+        throw window.originFetch(...args)
           .then(res => res.json())
           .then(res => {
             result.status = FULFILLED

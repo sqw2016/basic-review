@@ -55,6 +55,7 @@ declare module "*.less" {
 declare interface Window {
   locale: string;
   release: string;
+  originFetch: Function;
 }
 
 declare module "*.pdf" {
